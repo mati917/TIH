@@ -1,0 +1,19 @@
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Color palette
+$col-white: #FAFAFF;
+$col-black: #111113;
+$col-darkblue: #2C5777;
+$col-mediumdarkblue: #71BCDA;
+$col-mediumblue: #8DCBE2;
+$col-whiteblue: #C2EBFF;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+$ft-Quicksand: 'Quicksand', sans-serif, Arial;
+$ft-DavidLibre: 'David Libre', sans-serif, Arial;
