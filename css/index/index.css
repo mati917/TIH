@@ -1,5 +1,5 @@
-@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 @import url("https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 * {
   padding: 0;
   margin: 0;
@@ -15,11 +15,14 @@ html body {
   max-width: 100vw;
   height: 100%;
   overflow-x: hidden;
+  background: #FAFAFF;
+  color: #111113;
 }
 
 .container-xxxl header {
   width: 100vw;
   height: 100%;
+  z-index: 100;
   background: #8DCBE2;
 }
 
@@ -59,5 +62,62 @@ html body {
   border-color: transparent transparent #FAFAFF transparent;
   position: absolute;
   top: calc(166px + 80vh);
+}
+
+.container-xxxl main#whoAre {
+  margin-bottom: 100px;
+}
+
+.container-xxxl main#whoAre h2 {
+  text-align: center;
+}
+
+.container-xxxl main#whoAre section.text-container {
+  position: relative;
+  top: 30px;
+  padding: 0 60px;
+}
+
+.container-xxxl main#whoAre section.text-container p img {
+  float: right;
+  width: 30vw;
+}
+
+.container-xxxl main#whoAre div#whoAre-vermas {
+  width: 100px;
+  display: block;
+  margin: 40px auto;
+}
+
+.container-xxxl main#whoAre div#whoAre-vermas span {
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.container-xxxl main#whoAre div#whoAre-vermas i {
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.container-xxxl section#news {
+  height: 50vh;
+  width: 100vw;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-xxxl section#news div.row {
+  width: 100vw;
 }
 /*# sourceMappingURL=index.css.map */
