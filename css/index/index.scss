@@ -1,1 +1,49 @@
 @import '../inc/rules';
+.container-xxxl{
+   // HEADER
+   header{
+      width: 100vw;
+      height: 100%;
+      background: $col-mediumblue;
+      nav{
+         width: inherit;
+      }
+   }
+
+   // BANNER
+   div#banner{
+      height: 100vh;
+      width: 100vw;
+      z-index: -10;
+      background: url('/assets/img/pic01.jpg') no-repeat bottom fixed;
+      background-size: cover;
+
+      h1#banner--title{
+         position: absolute;
+         top: calc(166px + 20vh);
+         font-size: 60px;
+         text-align: center;
+         -webkit-text-stroke: 0.5px $col-white;
+      }
+      h2#banner--subtitle{
+         position: absolute;
+         top: calc(166px + 40vh);
+         text-align: center;
+         font-size: 50px;
+         -webkit-text-stroke: 0.5px $col-white;
+      }
+      div#banner--skew{
+         width: 100vw;
+         height: 20vh;
+         border-style: solid;
+         border-width: 0 0 20vh 100vw;
+         border-color: transparent transparent $col-white transparent;
+         position: absolute;
+         top: calc(166px + 80vh);
+      }
+   }
+
+   // MAIN
+   main#whoAre{
+   }
+}
