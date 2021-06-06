@@ -1,5 +1,6 @@
 @import '../inc/rules';
-.container-xxxl{
+.container-fluid{
+    padding: 0;
    // HEADER
    @import '../inc/header';
    
@@ -14,13 +15,29 @@
             }
         }
         .row:nth-child(2){
-            width: 100%;
+            width: 100vw;
 
             article{
-                img{
-                    height: 50vh;
-                    display: block;
-                    margin: 30px auto;
+                .row{
+                    width: 100%;
+                    margin: 20px auto;
+                    a{
+                        width: 100%;
+                        padding: 0;
+                        img{
+                            height: 50vh;
+                            display: block;
+                            margin: 30px auto;
+                            border-radius: 8px;
+                            box-shadow: 10px 13px 23px -6px rgba(110,110,110,0.44);
+                            -webkit-box-shadow: 10px 13px 23px -6px rgba(110,110,110,0.44);
+                            -moz-box-shadow: 10px 13px 23px -6px rgba(110,110,110,0.44);
+                            cursor: pointer;
+                        }
+                    }
+                    h5{
+                        text-align: center;
+                    }
                 }
             }
         }

@@ -20,9 +20,14 @@ html body {
   background: #FAFAFF;
 }
 
-.container-xxxl header {
+.container-fluid {
+  padding: 0;
+}
+
+.container-fluid header {
   width: 100%;
   height: 100%;
+  margin: auto 0;
   z-index: 1000;
   position: relative;
   top: 0;
@@ -30,36 +35,52 @@ html body {
   background: #8DCBE2;
 }
 
-.container-xxxl header nav {
+.container-fluid header nav {
   width: inherit;
+  padding: 0 20px;
 }
 
-.container-xxxl div#banner {
+.container-fluid div#banner {
   height: 100vh;
   width: 100vw;
+  margin: auto 0;
   position: relative;
   z-index: -10;
   background: url("/assets/img/pic01.jpg") no-repeat bottom fixed;
   background-size: cover;
 }
 
-.container-xxxl div#banner h1#banner--title {
+.container-fluid div#banner h1#banner--title {
+  width: 100%;
   position: absolute;
-  top: calc(166px + 20vh);
+  top: calc(166px + 5vh);
   font-size: 60px;
   text-align: center;
   -webkit-text-stroke: 0.5px #FAFAFF;
 }
 
-.container-xxxl div#banner h2#banner--subtitle {
+@media (max-width: 576px) {
+  .container-fluid div#banner h1#banner--title {
+    font-size: 40px;
+  }
+}
+
+.container-fluid div#banner h2#banner--subtitle {
+  width: 100%;
   position: absolute;
-  top: calc(166px + 40vh);
+  top: calc(166px + 20vh);
   text-align: center;
   font-size: 50px;
   -webkit-text-stroke: 0.5px #FAFAFF;
 }
 
-.container-xxxl div#banner div#banner--skew {
+@media (max-width: 576px) {
+  .container-fluid div#banner h2#banner--subtitle {
+    font-size: 30px;
+  }
+}
+
+.container-fluid div#banner div#banner--skew {
   width: 100vw;
   height: 20vh;
   border-style: solid;
@@ -69,77 +90,78 @@ html body {
   top: calc(100% - 20vh);
 }
 
-.container-xxxl main#whoAre {
+.container-fluid main#whoAre {
   height: 120%;
   position: relative;
+  margin: auto 0;
   margin-bottom: 70px;
 }
 
-.container-xxxl main#whoAre h2 {
+.container-fluid main#whoAre h2 {
   text-align: center;
 }
 
-.container-xxxl main#whoAre section.text-container {
+.container-fluid main#whoAre section.text-container {
   position: relative;
   top: 30px;
   padding: 0 60px;
 }
 
-.container-xxxl main#whoAre section.text-container p img {
+.container-fluid main#whoAre section.text-container p img {
   float: right;
   width: 30vw;
 }
 
-.container-xxxl main#whoAre div#whoAre-vermas {
+.container-fluid main#whoAre div#whoAre-vermas {
   width: 100px;
   display: block;
   margin: 50px auto !important;
 }
 
-.container-xxxl main#whoAre div#whoAre-vermas span {
+.container-fluid main#whoAre div#whoAre-vermas span {
   width: 100px;
   display: inline-block;
   text-align: center;
   font-size: 1.2em;
 }
 
-.container-xxxl main#whoAre div#whoAre-vermas i {
+.container-fluid main#whoAre div#whoAre-vermas i {
   width: 100px;
   display: inline-block;
   text-align: center;
   font-size: 1.2em;
 }
 
-.container-xxxl section#news {
+.container-fluid section#news {
   height: 100%;
   width: 100%;
-  margin: 0;
+  margin: auto 0;
 }
 
-.container-xxxl section#news .container-fluid .row {
+.container-fluid section#news .container-fluid .row {
   padding: 2vw;
 }
 
-.container-xxxl section#news .container-fluid .row div.news--posts {
-  padding: 20px 2vw;
+.container-fluid section#news .container-fluid .row div.news--posts {
+  padding: 20px 20px;
 }
 
-.container-xxxl section#news .container-fluid .row div.news--posts article {
+.container-fluid section#news .container-fluid .row div.news--posts article {
+  height: 250px;
   border-radius: 10px;
   background: url("/assets/img/pic01.jpg") no-repeat center;
-  height: 250px;
   box-shadow: 19px 13px 36px 0px rgba(119, 120, 124, 0.41);
   -webkit-box-shadow: 19px 13px 36px 0px rgba(119, 120, 124, 0.41);
   -moz-box-shadow: 19px 13px 36px 0px rgba(119, 120, 124, 0.41);
   cursor: pointer;
 }
 
-.container-xxxl section#news .container-fluid .row div.news--posts article a {
+.container-fluid section#news .container-fluid .row div.news--posts article a {
   text-decoration: none;
   color: #111113;
 }
 
-.container-xxxl section#news .container-fluid .row div.news--posts article a footer {
+.container-fluid section#news .container-fluid .row div.news--posts article a footer {
   height: 150px;
   padding: 8px 10px;
   position: relative;
@@ -151,25 +173,25 @@ html body {
   transition: .4s;
 }
 
-.container-xxxl section#news .container-fluid .row div.news--posts article a footer .row {
+.container-fluid section#news .container-fluid .row div.news--posts article a footer .row {
   padding: 5px;
 }
 
-.container-xxxl footer#footer {
+.container-fluid footer#footer {
   padding: 10px 5vw;
 }
 
-.container-xxxl footer#footer ul {
+.container-fluid footer#footer ul {
   width: 100%;
   list-style: none;
 }
 
-.container-xxxl footer#footer ul div.row {
+.container-fluid footer#footer ul div.row {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-.container-xxxl footer#footer ul div.row li {
+.container-fluid footer#footer ul div.row li {
   margin: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,7 +205,7 @@ html body {
           align-items: center;
 }
 
-.container-xxxl footer#footer ul div.row li i {
+.container-fluid footer#footer ul div.row li i {
   font-size: 30px;
   height: 50px;
   width: 50px;
@@ -194,12 +216,12 @@ html body {
   transition: ease .4s;
 }
 
-.container-xxxl footer#footer ul div.row li i:hover {
+.container-fluid footer#footer ul div.row li i:hover {
   background: #C2EBFF;
-  text-align: center;
+  text-align: center !important;
 }
 
-.container-xxxl footer#footer ul div.row li a {
+.container-fluid footer#footer ul div.row li a {
   text-decoration: none;
   color: #111113;
 }

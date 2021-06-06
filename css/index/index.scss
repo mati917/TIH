@@ -1,5 +1,6 @@
 @import '../inc/rules';
-.container-xxxl{
+.container-fluid{
+   padding: 0;
    // HEADER
    @import '../inc/header';
    
@@ -7,24 +8,33 @@
    div#banner{
       height: 100vh;
       width: 100vw;
+      margin: auto 0;
       position: relative;
       z-index: -10;
       background: url('/assets/img/pic01.jpg') no-repeat bottom fixed;
       background-size: cover;
       
       h1#banner--title{
+         width: 100%;
          position: absolute;
-         top: calc(166px + 20vh);
+         top: calc(166px + 5vh);
          font-size: 60px;
          text-align: center;
          -webkit-text-stroke: 0.5px $col-white;
+         @media (max-width: 576px){
+            font-size: 40px;
+         }
       }
       h2#banner--subtitle{
+         width: 100%;
          position: absolute;
-         top: calc(166px + 40vh);
+         top: calc(166px + 20vh);
          text-align: center;
          font-size: 50px;
          -webkit-text-stroke: 0.5px $col-white;
+         @media (max-width: 576px){
+            font-size: 30px;
+         }
       }
       div#banner--skew{
          width: 100vw;
@@ -41,6 +51,7 @@
    main#whoAre{
       height: 120%;
       position: relative;
+      margin: auto 0;
       margin-bottom: 70px;
       h2{
          text-align: center;
@@ -81,16 +92,16 @@
    section#news{
       height: 100%;
       width: 100%;
-      margin: 0;
+      margin: auto 0;
       .container-fluid{
          .row{
             padding: 2vw;
             div.news--posts{
-               padding: 20px 2vw;
+                  padding: 20px 20px;
                article{
+                  height: 250px;
                   border-radius: 10px;
                   background: url('/assets/img/pic01.jpg') no-repeat center;
-                  height: 250px;
                   box-shadow: 19px 13px 36px 0px rgba(119, 120, 124, 0.41);
                   -webkit-box-shadow: 19px 13px 36px 0px rgba(119, 120, 124, 0.41);
                   -moz-box-shadow: 19px 13px 36px 0px rgba(119, 120, 124, 0.41);

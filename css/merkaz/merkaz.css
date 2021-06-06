@@ -20,9 +20,14 @@ html body {
   background: #FAFAFF;
 }
 
-.container-xxxl header {
+.container-fluid {
+  padding: 0;
+}
+
+.container-fluid header {
   width: 100%;
   height: 100%;
+  margin: auto 0;
   z-index: 1000;
   position: relative;
   top: 0;
@@ -30,42 +35,62 @@ html body {
   background: #8DCBE2;
 }
 
-.container-xxxl header nav {
+.container-fluid header nav {
   width: inherit;
+  padding: 0 20px;
 }
 
-.container-xxxl main#main .row h1#title {
+.container-fluid main#main .row h1#title {
   width: 100vw;
   margin: 100px 0 !important;
   display: block;
   text-align: center;
 }
 
-.container-xxxl main#main .row:nth-child(2) {
-  width: 100%;
+.container-fluid main#main .row:nth-child(2) {
+  width: 100vw;
 }
 
-.container-xxxl main#main .row:nth-child(2) article img {
+.container-fluid main#main .row:nth-child(2) article .row {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.container-fluid main#main .row:nth-child(2) article .row a {
+  width: 100%;
+  padding: 0;
+}
+
+.container-fluid main#main .row:nth-child(2) article .row a img {
   height: 50vh;
   display: block;
   margin: 30px auto;
+  border-radius: 8px;
+  box-shadow: 10px 13px 23px -6px rgba(110, 110, 110, 0.44);
+  -webkit-box-shadow: 10px 13px 23px -6px rgba(110, 110, 110, 0.44);
+  -moz-box-shadow: 10px 13px 23px -6px rgba(110, 110, 110, 0.44);
+  cursor: pointer;
 }
 
-.container-xxxl footer#footer {
+.container-fluid main#main .row:nth-child(2) article .row h5 {
+  text-align: center;
+}
+
+.container-fluid footer#footer {
   padding: 10px 5vw;
 }
 
-.container-xxxl footer#footer ul {
+.container-fluid footer#footer ul {
   width: 100%;
   list-style: none;
 }
 
-.container-xxxl footer#footer ul div.row {
+.container-fluid footer#footer ul div.row {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-.container-xxxl footer#footer ul div.row li {
+.container-fluid footer#footer ul div.row li {
   margin: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,7 +104,7 @@ html body {
           align-items: center;
 }
 
-.container-xxxl footer#footer ul div.row li i {
+.container-fluid footer#footer ul div.row li i {
   font-size: 30px;
   height: 50px;
   width: 50px;
@@ -90,12 +115,12 @@ html body {
   transition: ease .4s;
 }
 
-.container-xxxl footer#footer ul div.row li i:hover {
+.container-fluid footer#footer ul div.row li i:hover {
   background: #C2EBFF;
-  text-align: center;
+  text-align: center !important;
 }
 
-.container-xxxl footer#footer ul div.row li a {
+.container-fluid footer#footer ul div.row li a {
   text-decoration: none;
   color: #111113;
 }
