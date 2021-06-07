@@ -135,46 +135,31 @@ html body {
 .container-fluid section#news {
   height: 100%;
   width: 100%;
+  padding: 0;
   margin: auto 0;
 }
 
-.container-fluid section#news .container-fluid .row {
-  padding: 2vw;
+.container-fluid section#news div.row {
+  padding: 0 20px;
+  width: 100%;
+  margin: 0;
 }
 
-.container-fluid section#news .container-fluid .row div.news--posts {
-  padding: 20px 20px;
-}
-
-.container-fluid section#news .container-fluid .row div.news--posts article {
-  height: 250px;
-  border-radius: 10px;
-  background: url("/assets/img/pic01.jpg") no-repeat center;
-  box-shadow: 19px 13px 36px 0px rgba(119, 120, 124, 0.41);
-  -webkit-box-shadow: 19px 13px 36px 0px rgba(119, 120, 124, 0.41);
-  -moz-box-shadow: 19px 13px 36px 0px rgba(119, 120, 124, 0.41);
-  cursor: pointer;
-}
-
-.container-fluid section#news .container-fluid .row div.news--posts article a {
+.container-fluid section#news div.row article.post a {
   text-decoration: none;
-  color: #111113;
 }
 
-.container-fluid section#news .container-fluid .row div.news--posts article a footer {
-  height: 150px;
-  padding: 8px 10px;
-  position: relative;
-  top: 100px;
-  background: rgba(224, 224, 224, 0.4);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  -webkit-transition: .4s;
-  transition: .4s;
+.container-fluid section#news div.row article.post a div.card {
+  border-radius: 15px;
+  box-shadow: 8px 24px 33px -2px rgba(168, 165, 165, 0.56);
+  -webkit-box-shadow: 8px 24px 33px -2px rgba(168, 165, 165, 0.56);
+  -moz-box-shadow: 8px 24px 33px -2px rgba(168, 165, 165, 0.56);
 }
 
-.container-fluid section#news .container-fluid .row div.news--posts article a footer .row {
-  padding: 5px;
+.container-fluid section#news div.row article.post a div.card img {
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .container-fluid footer#footer {

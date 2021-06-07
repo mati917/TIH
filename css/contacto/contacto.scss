@@ -1,0 +1,70 @@
+@import '../inc/rules';
+
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    
+    // HEADER
+    @import '../inc/header';
+    
+    // MAIN
+    main{
+        background: yellow;
+        div.row{
+            padding: 50px 30px;
+            // Form
+            form{
+                padding: 0;
+                div{
+                    padding: 0 20px;
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    background: lightblue;
+                    @media (max-width: 768px){
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 0;
+                        border-top-right-radius: 20px;
+                    }
+                    
+                    div{
+                        width: 100%;
+                        button{
+                            width: 150px;
+                            position: relative;
+                            left: calc(50% - 75px);
+                        }
+                    }
+                }
+            }
+            // Aside
+            aside{
+                padding: 0;
+                .list-group{
+                    width: 100%;
+                    height: 291px; 
+                    position: relative;
+                    top: calc(50% - 145.5px);
+                    border-radius: 0;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    @media (max-width: 768px){
+                        border-top-right-radius: 0;
+                        border-bottom-left-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                    }
+                    a.list-group-item{
+                        height: 72.75px;
+                        padding: 0 16px;
+                        
+                        i{
+                            line-height: 72.75px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // FOOTER
+    @import '../inc/footer';
+}
