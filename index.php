@@ -16,7 +16,7 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
    
    <!-- CSS -->
-   <link rel="stylesheet" href="/css/index/index.css">
+   <link rel="stylesheet" href="css/index/index.css">
    
    <!-- Font Awesome -->
    <script src="https://kit.fontawesome.com/3b93b417c8.js" crossorigin="anonymous"></script>
@@ -27,7 +27,7 @@
       <header class="row">
          <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-               <img class="navbar-brand" src="/assets/icons/semel.png" height="150">
+               <img class="navbar-brand" src="assets/icons/semel.png" height="150">
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                </button>
@@ -37,16 +37,16 @@
                         <a class="nav-link active" aria-current="page" href="/">Inicio</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="/iton.html">Itón</a>
+                        <a class="nav-link" href="iton.php">Itón</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="/merkaz.html">Merkaz</a>
+                        <a class="nav-link" href="merkaz.html">Merkaz</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="/contacto.html">Contacto</a>
+                        <a class="nav-link" href="contacto.html">Contacto</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="/aboutUs.html">Sobre nosotros</a>
+                        <a class="nav-link" href="aboutUs.html">Sobre nosotros</a>
                      </li>
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -60,10 +60,10 @@
                         </ul>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Postear</a>
+                        <a class="nav-link <?php if(!session_start()){echo "disabled";} ?>" href="post.php" tabindex="-1" aria-disabled="true">Postear</a>
                      </li>
                   </ul>
-                  <a class="d-flex">Iniciar sesión</a>
+                  <a href="signin.php" class="d-flex">Iniciar sesión</a>
                </div>
             </div>
          </nav>
@@ -86,7 +86,7 @@
             </p>
             <p>
                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim cum dolorem magnam? Cumque, harum veniam libero blanditiis reprehenderit sit accusantium dolor earum! 
-               <img src="/assets/img/theodorHertzl.jpg" alt="Theodor Hertzl" title="Theodor Hertzl, nuestro ideólogo">
+               <img src="assets/img/theodorHertzl.jpg" alt="Theodor Hertzl" title="Theodor Hertzl, nuestro ideólogo">
                Quibusdam nam voluptatem, quaerat voluptas repellat exercitationem dolor inventore excepturi eius unde culpa dignissimos facilis neque explicabo? Inventore laborum suscipit nemo ipsa ipsum in aut pariatur omnis animi!
             </p>
             <p>
@@ -108,7 +108,7 @@
             <article class="post">
                <a href="">
                   <div class="card mb-3">
-                     <img src="/assets/img/theodorHertzl.jpg" class="card-img-top" alt="...">
+                     <img src="assets/img/theodorHertzl.jpg" class="card-img-top" alt="...">
                      <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -121,7 +121,7 @@
             <article class="post">
                <a href="">
                   <div class="card mb-3">
-                     <img src="/assets/img/theodorHertzl.jpg" class="card-img-top" alt="...">
+                     <img src="assets/img/theodorHertzl.jpg" class="card-img-top" alt="...">
                      <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

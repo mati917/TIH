@@ -1,3 +1,6 @@
+<?php
+include_once('post/submit.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,40 +15,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/post/post.css">
+    <link rel="stylesheet" href="css/post/post.css">
+    <!-- Quill CSS -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/3b93b417c8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container-fluid">
-        <form action="">
+        <form method="POST" action="">
             <header class="row g-3">
                 <div class="col-auto">
-                    <p class="form-control-plaintext">Título</p>
+                    <label for="title" class="visually-hidden">Título</label>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Agrega un título">
                 </div>
                 <div class="col-auto">
-                    <label for="inputPassword2" class="visually-hidden">Password</label>
-                    <input type="text" class="form-control" id="title" placeholder="Agrega un título">
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Subir</button>
+                    <button type="submit" name="submit" class="btn btn-primary mb-3">Subir</button>
                 </div>
                 <div class="col-auto">
                     <a href="/" class="btn btn-danger mb-3">Volver</a>
                 </div>
             </header>
-            
-            <textarea name="content" id="editor" placeholder="Comienza a escribri aquí..."></textarea>
+            <?php
+                if(!empty($statusMsg)){
+                    echo $statusMsg;
+                }
+            ?>
+            <!--CKEditor -->
+            <textarea name="cuerpo" id="editor"></textarea>
         </form>
     </div>
+    
+    
+    
     
     <!-- Scripts -->
     
     <!-- CKEditor -->
-    <script src="/plugins/CKEditor/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
     <script>
-        
         ClassicEditor
         .create( document.querySelector( '#editor' ) )
         .then( editor => {
@@ -55,6 +64,7 @@
             console.error( error );
         } );
     </script>
+    
     <!-- JQuery de Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>

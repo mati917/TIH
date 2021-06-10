@@ -46,7 +46,7 @@ html body {
   margin: auto 0;
   position: relative;
   z-index: -10;
-  background: url("/assets/img/pic01.jpg") no-repeat bottom fixed;
+  background: url("../../assets/img/pic01.jpg") no-repeat bottom fixed;
   background-size: cover;
 }
 
