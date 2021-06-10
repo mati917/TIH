@@ -15,7 +15,11 @@ include_once('post/submit.php');
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     
     <!-- CSS -->
+<<<<<<< HEAD:post.php
     <link rel="stylesheet" href="css/post/post.css">
+=======
+    <link rel="stylesheet" href="/css/post/post.css">
+>>>>>>> 1cad5fcdabc82d12492dd0a4463ba5a44e16c0f6:post.html
     <!-- Quill CSS -->
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     
@@ -37,6 +41,7 @@ include_once('post/submit.php');
                     <a href="/" class="btn btn-danger mb-3">Volver</a>
                 </div>
             </header>
+<<<<<<< HEAD:post.php
             <?php
                 if(!empty($statusMsg)){
                     echo $statusMsg;
@@ -44,6 +49,15 @@ include_once('post/submit.php');
             ?>
             <!--CKEditor -->
             <textarea name="cuerpo" id="editor"></textarea>
+=======
+            
+            <!-- Quill Editor -->
+            <div id="editor">
+                <p>Hello World!</p>
+                <p>Some initial <strong>bold</strong> text</p>
+                <p><br></p>
+            </div>
+>>>>>>> 1cad5fcdabc82d12492dd0a4463ba5a44e16c0f6:post.html
         </form>
     </div>
     
@@ -52,6 +66,7 @@ include_once('post/submit.php');
     
     <!-- Scripts -->
     
+<<<<<<< HEAD:post.php
     <!-- CKEditor -->
     <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
     <script>
@@ -63,6 +78,33 @@ include_once('post/submit.php');
         .catch( error => {
             console.error( error );
         } );
+=======
+    <!-- Quill JS -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+        var toolbarOptions = [
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+        [{ 'font': [] }],
+        
+        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+        ['blockquote'],
+                                                          // custom button values
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'align': [] }],
+        [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+        [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+        ['link', 'image'],      // superscript/subscript
+        
+        ['clean']                                         // remove formatting button
+        ];
+        
+        var quill = new Quill('#editor', {
+            modules: {
+                toolbar: toolbarOptions
+            },
+            theme: 'snow'
+        });
+>>>>>>> 1cad5fcdabc82d12492dd0a4463ba5a44e16c0f6:post.html
     </script>
     
     <!-- JQuery de Bootstrap-->
